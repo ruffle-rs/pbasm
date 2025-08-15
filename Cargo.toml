@@ -1,0 +1,22 @@
+[package]
+name = "pbasm"
+version = "0.1.0"
+description = "pbasm: The Last Pixel Bender Assembler"
+authors = ["Kamil Jarosz <kjarosh256@gmail.com>"]
+edition = "2024"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/ruffle-rs/ruffle"
+
+[dependencies]
+thiserror = "2.0.14"
+clap = { version = "4.5.45", features = ["derive"] }
+
+[dependencies.pixel_bender]
+git = "https://github.com/ruffle-rs/ruffle.git"
+rev = "2536d463455b0eb3723aa9ea0fc8db398c0ed530"
+features = ["assembly"]
+
+[profile.release]
+strip = true
+lto = true
+panic = "abort"
