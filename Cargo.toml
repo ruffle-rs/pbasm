@@ -5,7 +5,13 @@ description = "pbasm: The Last Pixel Bender Assembler"
 authors = ["Kamil Jarosz <kjarosh256@gmail.com>"]
 edition = "2024"
 license = "MIT OR Apache-2.0"
-repository = "https://github.com/ruffle-rs/ruffle"
+repository = "https://github.com/ruffle-rs/pbasm"
+readme = "README.md"
+categories = ["command-line-utilities", "compilers"]
+keywords = ["pixel-bender", "flash", "shader", "assembler", "ruffle"]
+
+[lints.rust]
+unsafe_code = "forbid"
 
 [dependencies]
 thiserror = "2.0.14"
